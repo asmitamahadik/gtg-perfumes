@@ -1,0 +1,2761 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+.container {
+    max-width: auto;
+    margin: 0 auto;
+    padding: 0 73.83px;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.main-header {
+    width: 100%;
+    background: transparent;
+    padding: 24px 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.logo {
+    max-width: 120px;
+}
+
+.logo img {
+    max-height: 32px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 32px;
+}
+
+.nav-links li a {
+    font-size: 16.18px;
+    font-weight: 400;
+    color: #162456;
+    transition: color 0.3s cubic-bezier(0.4, 0, 0.2, 1), transform 0.2s ease;
+    position: relative;
+    display: inline-block;
+}
+
+.nav-links li a:hover {
+    color: #1A4D2E;
+    transform: translateY(-2px);
+}
+
+/* Dropdown arrow for Shop link */
+.dropdown-arrow {
+    width: 10px;
+    height: 6px;
+    margin-left: 6px;
+    display: inline-block;
+    vertical-align: middle;
+    transition: transform 0.3s ease;
+    color: currentColor;
+}
+
+.drop-down:hover .dropdown-arrow {
+    transform: translateY(2px);
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.search-icon {
+    /* border: 1px solid #E0E0E0; */
+    padding: 8px;
+    /* border-radius: 50%; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform, border-color, background-color;
+}
+
+.search-icon:hover {
+    border-color: #1A4D2E;
+    transform: scale(1.1) rotate(5deg);
+}
+
+.search-icon:active {
+    transform: scale(0.95);
+}
+
+.search-icon img {
+    width: 38px;
+    height: 38px;
+}
+
+.btn-shop {
+    background-color: #1A4D2E;
+    color: #ffffff;
+    padding: 12px 28px;
+    border-radius: 50px;
+    font-size: 15px;
+}
+
+#btn-gradient-1 {
+    background: linear-gradient(180deg, #033016 0%, #026630 100%);
+}
+
+/* =========================================
+   HERO SECTION (Grass Background Integration)
+   ========================================= */
+   .hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    /* Change from center to flex-start to allow manual top positioning */
+    align-items: flex-start; 
+    background-image: url('../Assets/hero_bottle.svg'); 
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    
+    /* Standardized top padding to create space below the absolute nav */
+    padding-top: 140px; 
+}
+
+.hero-text-content {
+    max-width: 700px;
+    position: relative;
+    z-index: 10;
+    margin-top: 0; 
+}
+/* 3. HERO CONTAINER: Text alignment */
+.hero-container {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    margin-left: 90px;
+}
+
+
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-text-content h1 {
+    font-size: 56px; 
+    font-weight: 700; 
+    line-height: 1.1;
+    margin-bottom: 80px;
+    color: #032E15 !important;
+}
+
+.hero-maintext {
+    font-size: 18px;
+    color: #444;
+    margin-bottom: 40px;
+}
+
+/* 4. STAT BOX: Ensure they stay in a row */
+.hero-stats {
+    display: flex;
+    gap: 48px;
+    margin-bottom: 40px;
+    margin-top: -20px; /* Move stats up */
+}
+
+.stat-box {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.stat-box img {
+    height: 64px; /* Significantly increased size */
+    width: auto;
+}
+
+.stat-box p {
+    font-size: 22px; /* Increased from 12px */
+    font-weight: 200; /* Changed from 700 */
+    /* text-transform: uppercase; */
+    color: #6B8E6B; /* Muted grey-green color */
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.hero-image img {
+    max-width: 500px; /* Adjust for SVG bottle scale */
+    height: auto;
+}
+
+/* BADGE */
+.badge {
+    margin-bottom: 32px;
+}
+
+.medal-tag {
+    background: linear-gradient(180deg, #51766B 0%, #52967C 100%);
+    padding: 8px 16px !important;
+    border-radius: 100px !important;
+    display: flex;
+    align-items: center;
+    width: fit-content !important;
+}
+
+.medal-tag span {
+    color: #ffffff !important;
+    font-weight: 100 !important;
+}
+
+.medal-tag img {
+    height: 1.5rem;
+    width: 1.5rem;
+    margin-right: 0.5rem;
+
+}
+/* PRIMARY BUTTON */
+.btn-primary {
+    display: inline-block;
+    background-color: #1A4D2E;
+    color: #fff;
+    padding: 16px 40px;
+    border-radius: 50px;
+    transition: transform 0.2s;
+}
+
+/* (The rest of your Section 2, Table, and Footer CSS remains the same) */
+
+/* section 2 
+Main Layout (Two Columns) */
+
+
+/* PRODUCT SECTION WRAPPER */
+.product-config-section {
+    padding: 80px 0;
+    background-color: #fff;
+}
+
+/* Container to match 1456px Figma width */
+.pdp-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Exact 50/50 split */
+    gap: 64px; /* Generous gap like Figma */
+    align-items: start; /* Aligns both columns to the very top */
+    
+    max-width: 1280px; /* Prevents it from getting too wide */
+    margin: 0 auto;    /* Centers the whole block */
+    padding-top: 20px;
+}
+
+.gallery-column {
+    width: 100%;
+    /* No extra margins that could break alignment */
+    margin: 0; 
+}
+
+.fade-out {
+    opacity: 0;
+    transform: scale(0.95);
+}
+
+.fade-in {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* 2. Gallery & Thumbnail Styling */
+/* =========================================
+   GALLERY CAROUSEL (REVISED FIX)
+   ========================================= */
+
+   .main-image-viewport {
+    position: relative;
+    background: linear-gradient(180deg, #F2F2F2 0%, #E6E6E6 100%);
+    border-radius: 20px;
+    margin-bottom: 20px;
+    
+    /* Flexbox Centering */
+    display: flex;
+    justify-content: center !important; /* Force Horizontal Center */
+    align-items: center !important;     /* Force Vertical Center */
+    
+    height: 550px; 
+    overflow: hidden;
+    padding: 20px;
+}
+
+#js-main-img {
+    height: 80%;
+    width: auto;
+    max-width: 90%;
+    object-fit: contain;
+    
+    /* Force Block display to accept auto margins */
+    display: block;
+    margin: 0 auto;
+    
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 1;
+}
+
+/* Animations */
+.fade-out { opacity: 0 !important; transform: scale(0.95); }
+.fade-in { opacity: 1 !important; transform: scale(1); }
+
+/* ------------------------------------------------------
+   BUTTONS: EXACT DOUBLE CIRCLE MATCH
+   ------------------------------------------------------ */
+.nav-arrow {
+    position: absolute;
+    bottom: 30px;
+    width: 50px;  /* Slightly tighter outer ring */
+    height: 50px;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 20;
+    transition: transform 0.2s ease;
+    border: none;
+}
+
+/* Inner Ring */
+.nav-arrow::after {
+    content: '';
+    position: absolute;
+    width: 30px; /* Tighter inner ring */
+    height: 30px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.nav-arrow:hover { transform: scale(1.05); }
+.nav-arrow:active { transform: scale(0.95); }
+
+.nav-arrow.prev { left: 30px; }
+.nav-arrow.next { right: 30px; }
+
+.nav-arrow img {
+    width: 38.9;
+    height: 38.9;
+    filter: none;
+    z-index: 2;
+}
+
+/* ------------------------------------------------------
+   DOTS: ANTI-STRETCH FIX
+   ------------------------------------------------------ */
+.gallery-dots {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    display: flex;
+    gap: 12px;
+    z-index: 20;
+    
+    /* CRITICAL: Forces dots to stay small circles */
+    align-items: center !important; 
+    height: 20px !important; 
+}
+
+.dot {
+    /* Explicit block styling to prevent stretching */
+    display: block !important;
+    width: 10px !important;
+    height: 10px !important;
+    min-width: 10px !important;
+    min-height: 10px !important;
+    
+    border: 1.5px solid #1A4D2E;
+    border-radius: 50%;
+    background: transparent;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+}
+
+.dot.active {
+    background-color: #1A4D2E;
+    transform: scale(1.1);
+}
+
+/* ------------------------------------------------------
+   Second page GTG 
+   ------------------------------------------------------ */
+
+
+.single-star {
+    color: #00C950;
+    font-size: 100;
+}
+
+.product-rating {
+    font-size: 900 !important;
+    color: #032E15;
+}
+
+.intro-text {
+    color: #032E15;
+    font-size: 100;
+    font-weight: 100;
+    font-style: Light;
+    font-size: 16.18px;
+    leading-trim: NONE;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: justify;
+}
+
+
+/* ------------------------------------------------------
+   THUMBNAILS (Keep Visible)
+   ------------------------------------------------------ */
+.thumbnail-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.thumb {
+
+    width: 132;
+    height: 130;
+    top: 702.99px;
+    left: 475.78px;    
+    object-fit: cover;
+    border-radius: 12px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    opacity: 1 !important; /* Never disappear */
+}
+
+.thumb.active {
+    border-color: #1A4D2E;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 768px) {
+    .main-image-viewport { height: 400px; }
+    .nav-arrow { width: 44px; height: 44px; bottom: 20px; }
+    .nav-arrow::after { width: 26px; height: 26px; }
+    .gallery-dots { bottom: 32px; }
+}
+
+
+/* 3. Subscription Cards & Fragrance Selection */
+
+/* =========================================
+   NEW SUBSCRIPTION CARD STYLES
+   ========================================= */
+
+/* Main Card Container */
+.sub-card {
+    border-radius: 8px;
+    background: #fff;
+    margin-bottom: 24px;
+    margin-top: 31px;
+    overflow: hidden; /* Keeps the header inside rounded corners */
+}
+
+.sub-card.active {
+    border: 1px solid #B8B8B8; /* Brand Green */
+}
+
+.sub-card:not(.active) .sub-body {
+    display: none;
+}
+.sub-card:not(.active) .card-header-row {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.product-rating {
+    margin-top: 8px;
+    margin-bottom: 20px;
+}
+
+
+/* Full Width Header */
+.most-popular-header {
+    background: linear-gradient(90deg, #01C850 0%, #033016 100%); 
+    color: #fff;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 8px 0;
+    letter-spacing: 0.5px;
+;
+}
+
+.card-content-wrapper {
+    padding: 20px;
+}
+
+/* Header Row (Radio + Title + Price) */
+.card-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #919798;
+    margin-bottom: 20px;
+}
+
+.radio-label-main {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.radio-label-main input[type="radio"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #659079;
+    cursor: pointer;
+}
+
+.plan-title {
+    font-weight: 100;
+    font-style: Light;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0.9px;
+    vertical-align: middle;
+
+}
+
+.price-group {
+    text-align:justify;
+    display: flex;
+    width: 135.11288452148438;
+    height: 30;
+    top: 63.68px;
+    left: 457.56px;
+    gap: 10.11px;
+    angle: 0 deg;
+    opacity: 1;
+
+}
+
+.current-price {
+    align-self: center;
+    font-size: 20px;
+    font-weight: 800;
+    color: #000;
+    display: block;
+}
+
+.old-price {
+    color: #999;
+    font-weight: 300;
+    font-style: Light;
+    font-size: 18px;
+    line-height: 30px;
+    text-decoration: line-through;
+
+}
+
+/* Fragrance Grid */
+.fragrance-selector h4, .whats-included h4 {
+    font-size: 14px;
+    font-weight: 500;
+    color: #444;
+    margin-bottom: 12px;
+}
+
+.fragrance-grid {
+    margin-top: 20px;
+    display: flex;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 24px;
+}
+
+.frag-item {
+    position: relative !important;
+    overflow: visible !important;
+    width: 128px;
+    height: 146px;
+    border: 1px solid #E5E5E5;
+    border-radius: 4px;
+    padding: 10px;
+    cursor: pointer;
+    background: #F9F9F9;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.frag-item.selected {
+    /* border: 2px solid #1A4D2E; */
+    background-color: #F9FCFA; /* Very light green tint */
+}
+
+/* Hide default radio inside cards */
+.frag-item input { display: none; }
+
+.frag-header {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 8px;
+}
+
+.radio-circle {
+    width: 14px;
+    height: 14px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+}
+
+.frag-item.selected .radio-circle {
+    border-color: #64977C;
+}
+
+.frag-item.selected .radio-circle::after {
+    content: '';
+    position: absolute;
+    width: 8px; height: 8px;
+    background: #AEC2B7;
+    border-radius: 50%;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.scent-name {
+    font-size: 13px;
+    font-weight: 500;
+    color: #659279;
+}
+
+.frag-img-wrap {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    padding: 10px 0;
+}
+
+.frag-img-wrap img {
+    height: 94px;
+    width: 55px;
+}
+
+/* Best Seller Badge overlapping bottle */
+.best-seller-badge {
+
+    position: absolute;
+    top: -8px;  
+    right: 2px; 
+    background-image: url('../Assets/best-seller.svg');
+    height: 12px;
+    width: 60px;
+
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 10;
+}
+
+/* What's Included Grid */
+.included-grid {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.included-card {
+    flex: 1;
+    border: 1px solid #E5E5E5;
+    border-radius: 8px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 219px;
+}
+
+.inc-label {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 12px;
+    font-weight: 100;
+    font-style: Light;
+    font-size: 16.18px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    align-self: first baseline;
+}
+
+.inc-img-main {
+    height: 144px;
+    width: 84px;
+}
+
+.inc-img-group {
+    display: flex;
+}
+
+.inc-img-group img {
+    height: 94px;
+    width: auto;
+}
+
+/* Checkmark List */
+.product-perks li {
+    padding-left: 24px;
+    position: relative;
+    margin-bottom: 10px;
+    font-size: 13px;
+    color: #444;
+}
+
+.product-perks li::before {
+    content: '';
+    width: 14px; 
+    height: 14px;
+    background-image: url('../Assets/checkmark_icon.svg'); 
+    position: absolute;
+    left: 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Add to Cart Button */
+.add-to-cart-cta {
+    width: 100%;
+    padding: 16px 24px;
+    font-size: 16px;
+    font-weight: 700;
+    background: linear-gradient(180deg, #033016 0%, #026630 100%);
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-top: 24px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.add-to-cart-cta:hover {
+    background-color: #143b23;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(26, 77, 46, 0.3);
+}
+
+.add-to-cart-cta:active {
+    transform: translateY(0);
+}
+
+.whats-included {
+    margin: 24px 0 20px;
+    flex-wrap: wrap;
+}
+
+.whats-included h5 {
+    font-size: 13px;
+    color: #666;
+    margin: 0 0 14px 0;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+}
+
+.included-flex {
+    display: flex;
+    gap: 14px;
+    margin-bottom: 20px;
+}
+
+.included-box {
+    flex: 1;
+    border: 1px solid #E5E5E5;
+    border-radius: 10px;
+    padding: 14px 10px;
+    text-align: center;
+    background: #FAFAFA;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.included-box:hover {
+    border-color: #1A4D2E;
+    background: #F8FAF8;
+}
+
+.box-label {
+    display: block;
+    font-size: 11px;
+    color: #555;
+    margin-bottom: 10px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.box-label strong {
+    color: #1A4D2E;
+    font-weight: 700;
+}
+
+.included-box img {
+    height: 48px;
+    width: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.sampler-preview {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.sampler-preview img {
+    height: 32px;
+    width: auto;
+    display: block;
+}
+
+.collection-section {
+    padding: 100px 0;
+}
+
+.collection-flex {
+    display: flex;
+    align-items: center;
+    gap: 80px; /* Space between accordion and image */
+}
+
+.collection-content {
+    flex: 1;
+}
+
+.section-title {
+    font-size: 36px;
+    font-weight: 700;
+    color: #1A4D2E; /* Brand Green */
+    margin-bottom: 40px;
+}
+
+/* ACCORDION STYLING */
+.accordion-item {
+    border: 1px solid #E0E0E0; /* Lighter border color */
+    border-radius: 12px;
+    margin-bottom: 16px;
+    overflow: hidden;
+}
+
+.accordion-header {
+    padding: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    background: #fff;
+}
+
+.accordion-header h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1A4D2E;
+}
+
+.accordion-header .icon {
+    font-size: 24px;
+    font-weight: 300;
+    color: #1A4D2E;
+    transition: transform 0.3s ease;
+}
+
+/* Active item shows minus sign */
+.accordion-item.active .accordion-header .icon {
+    content: '−';
+}
+
+/* Collapsed items show plus sign */
+.accordion-item:not(.active) .accordion-header .icon {
+    content: '+';
+}
+
+.accordion-body {
+    padding: 0 24px 24px 24px;
+    display: none; /* Hidden by default */
+}
+
+/* Show content when item is active */
+.accordion-item.active .accordion-body {
+    display: block;
+}
+
+.accordion-item.active {
+    background-color: #fdfdfd;
+}
+
+/* RIGHT IMAGE */
+.collection-image {
+    flex: 1;
+}
+
+.collection-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 24px; /* Matches the rounded corners in Figma */
+    object-fit: cover;
+}
+
+   .stats-banner {
+    background: linear-gradient(135deg, #0d2b1a 0%, #1A4D2E 100%); 
+    padding: 60px 0;
+    color: #ffffff; /* This makes the data (84%, 78%, etc.) visible */
+}
+
+.stats-flex-container {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.stat-item {
+    flex: 1;
+    padding: 0 15px;
+}
+
+.stat-number {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.stat-desc {
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+/* =========================================
+   COMPARISON TABLE (Screenshot 2.22.04 AM)
+   ========================================= */
+ /* TABLE WRAPPER & TITLE */
+.comparison-section { padding: 80px 0; text-align: center; }
+.table-title { font-size: 32px; color: #1A4D2E; margin-bottom: 40px; }
+
+/* MAIN TABLE STYLING */
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: inherit;
+}
+
+/* HEADER BRAND BOXES */
+.brand-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.brand-box img {
+    width: 50px; /* Small square thumbnails */
+    height: 50px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.brand-box span {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: #888;
+}
+
+/* THE HIGHLIGHTED GTG COLUMN */
+.comparison-table .highlight {
+    background-color: #F0FDF4;
+    border-left: 1px solid #E9EEE9;
+    border-right: 1px solid #E9EEE9;
+}
+
+.comparison-table .highlight span { color: #1A4D2E; } /* GTG label in Green */
+
+/* CELLS & BORDERS */
+.comparison-table th, .comparison-table td {
+    padding: 18px 10px;
+    border-bottom: 1px solid #F0F0F0;
+    text-align: center;
+}
+
+/* FIRST COLUMN (QUALITIES) */
+.comparison-table td:first-child {
+    text-align: left;
+    font-weight: 700;
+    color: #666666;
+    width: 25%;
+}
+
+.col-qualities {
+    text-align: left;
+    font-size: 11px;
+    font-weight: 700;
+    color: #000;
+}
+
+/* ICON SIZING */
+.comparison-table td img {
+    width: 20px;
+    height: 20px;
+}
+
+/* THE THREE LINES DIVIDER */
+.section-divider {
+    font-size: 24px;
+    color: #888;
+    letter-spacing: 10px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+/* BUTTON FIX: MATCHING FIGMA BRAND GREEN */
+.table-cta {
+    margin-top: 50px;
+}
+
+.btn-green-pill {
+    background: linear-gradient(180deg, #033016 0%, #026630 100%);
+    color: #ffffff;
+    border: none;
+    padding: 16px 48px;
+    border-radius: 50px; /* Pill Shape */
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    /* transition: background 0.3s ease; */
+}
+
+.btn-green-pill:hover {
+    background-color: #143b23; /* Darker green on hover */
+}
+
+/* =========================================
+   MAIN FOOTER (Screenshot 2.57.09 AM)
+   ========================================= */
+   .main-footer {
+    background-color: #032E15; /* Brand Dark Green */
+    color: #ffffff;
+    padding: 80px 0 40px;
+    font-size: 14px;
+}
+
+.footer-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+/* LEFT COLUMN: Logo & Links */
+.footer-brand {
+    flex: 1;
+}
+
+.footer-logo {
+    margin-left: 35px;
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+
+.footer-nav-groups {
+    display: flex;
+    gap: 150px;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #ffffff;
+}
+
+/* CENTER COLUMN: Socials */
+.footer-social {
+    flex: 0.5;
+}
+
+.social-list {
+    list-style: none;
+    padding: 0;
+}
+
+.social-list li {
+    margin-bottom: 15px;
+}
+
+.social-list a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.social-list img {
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) invert(1); /* Makes black SVGs white */
+    display: block;
+    margin-right: 0; /* Ensure proper alignment */
+}
+
+.social-list a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    justify-content: flex-start; /* Align icons to the left */
+}
+
+/* RIGHT COLUMN: Newsletter */
+.footer-newsletter {
+    flex: 1.5;
+    max-width: 450px;
+}
+
+.newsletter-text {
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.newsletter-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.newsletter-form input {
+    flex: 1;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    padding: 12px 15px;
+    color: #ffffff;
+    outline: none;
+}
+
+.btn-subscribe {
+    background-color: #a06a42; /* Exact brown/tan hex code from Figma */
+    color: #ffffff;
+    border: none;
+    padding: 0 25px;
+    border-radius: 4px; /* Exact border radius */
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.footer-disclaimer {
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 1.5;
+}
+
+.footer-disclaimer a {
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: underline;
+}
+
+#pd-hd-gp{
+    font-weight: 600 !important;
+    font-size: 36px !important;
+    line-height: 100%;
+    letter-spacing: 1.5px;
+}
+
+.count {
+    font-size:100 !important;
+    color: #032E15;
+    font-family: Inter;
+    font-weight: 300;
+    font-style: Light;
+    font-size: 13px;
+    line-height: 100%;
+    letter-spacing: 0%;
+}
+
+.intro-text {
+    
+}
+
+
+
+/* =========================================
+   CSS ANIMATIONS & TRANSITIONS
+   ========================================= */
+
+/* Smooth Image Loading with Fade-in */
+img {
+    transition: opacity 0.4s ease-in-out, transform 0.3s ease;
+}
+
+img[loading="lazy"] {
+    opacity: 0;
+    animation: fadeInImage 0.6s ease-in-out forwards;
+}
+
+@keyframes fadeInImage {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Image Gallery Animations */
+#js-main-img {
+    transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1), transform 0.3s ease;
+    will-change: opacity, transform;
+}
+
+#js-main-img.fade-out {
+    opacity: 0;
+    transform: scale(0.98);
+}
+
+#js-main-img.fade-in {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.thumb {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
+                border-color 0.3s ease, 
+                opacity 0.3s ease;
+    will-change: transform;
+}
+
+.thumb:hover {
+    transform: scale(1.08);
+    opacity: 0.9;
+}
+
+.thumb.active {
+    animation: thumbSelect 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes thumbSelect {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* Dot and nav-arrow styles moved above to main-image-viewport section */
+
+/* Card Selection Animations */
+.sub-card {
+    transition: border-color 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
+                box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
+                transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    will-change: transform, box-shadow;
+}
+
+.sub-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(26, 77, 46, 0.15);
+}
+
+.sub-card.active {
+    animation: cardSelect 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes cardSelect {
+    0% { 
+        transform: scale(1);
+        box-shadow: 0 2px 8px rgba(26, 77, 46, 0.1);
+    }
+    50% { 
+        transform: scale(1.02);
+        box-shadow: 0 6px 20px rgba(26, 77, 46, 0.2);
+    }
+    100% { 
+        transform: scale(1);
+        box-shadow: 0 2px 8px rgba(26, 77, 46, 0.1);
+    }
+}
+
+/* Fragrance Item Animations */
+.frag-item {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform, box-shadow, border-color;
+}
+
+.frag-item:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 8px 16px rgba(26, 77, 46, 0.15);
+    border-color: rgba(26, 77, 46, 0.5);
+}
+
+.frag-item.active {
+
+    background-color: rgba(26, 77, 46, 0.05);
+    animation: fragItemSelect 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes fragItemSelect {
+    0% { 
+        transform: scale(1);
+        box-shadow: 0 2px 8px rgba(26, 77, 46, 0.15);
+        opacity: 1;
+    }
+    50% { 
+        transform: scale(1.05);
+        box-shadow: 0 4px 12px rgba(26, 77, 46, 0.25);
+        opacity: 1;
+    }
+    100% { 
+        transform: scale(1);
+        box-shadow: 0 2px 8px rgba(26, 77, 46, 0.15);
+        opacity: 1;
+    }
+}
+
+.frag-item input:checked ~ img,
+.frag-item input:checked + * + img {
+    animation: bottlePulse 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.frag-item img {
+    opacity: 1 !important; 
+    transition: opacity 0.3s ease;
+    display: block !important; 
+}
+
+@keyframes bottlePulse {
+    0%, 100% { 
+        transform: scale(1) rotate(0deg);
+        opacity: 1;
+    }
+    25% { 
+        transform: scale(1.15) rotate(-2deg);
+        opacity: 1;
+    }
+    75% { 
+        transform: scale(1.15) rotate(2deg);
+        opacity: 1;
+    }
+}
+
+/* Accordion Animations */
+.accordion-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.4s ease, opacity 0.3s ease;
+    opacity: 0;
+}
+
+.accordion-item.active .accordion-body {
+    max-height: 500px;
+    opacity: 1;
+}
+
+.accordion-header .icon {
+    transition: transform 0.3s ease;
+    font-size: 24px;
+    font-weight: 300;
+}
+
+.accordion-item.active .accordion-header .icon {
+    transform: rotate(0deg);
+}
+
+.accordion-item {
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.accordion-item:hover {
+    border-color: #1A4D2E;
+    transform: translateX(4px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Button Animations */
+.btn-primary, .add-to-cart-btn, .add-to-cart-cta, .btn-green-pill, .btn-shop {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    will-change: transform, box-shadow;
+}
+
+.btn-primary::before, .add-to-cart-cta::before, .btn-green-pill::before, .btn-shop::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease;
+}
+
+.btn-primary:hover::before, .add-to-cart-cta:hover::before, 
+.btn-green-pill:hover::before, .btn-shop:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.btn-primary:hover, .add-to-cart-btn:hover, .add-to-cart-cta:hover, 
+.btn-green-pill:hover, .btn-shop:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(26, 77, 46, 0.4);
+}
+
+.btn-primary:active, .add-to-cart-btn:active, .add-to-cart-cta:active, 
+.btn-green-pill:active, .btn-shop:active {
+    transform: translateY(-1px);
+    transition: transform 0.1s ease;
+}
+
+/* Button Loading State */
+.btn-loading {
+    pointer-events: none;
+    opacity: 0.7;
+    position: relative;
+}
+
+.btn-loading::before {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #fff;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+    to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Navigation Animations */
+.main-header.scrolled {
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 16px 0;
+}
+
+.nav-links li a {
+    position: relative;
+}
+
+.nav-links li a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: rgb(25,36,83);
+    transition: width 0.3s ease;
+}
+
+.nav-links li a:hover::after {
+    width: 100%;
+}
+
+/* Form Input Animations */
+.newsletter-form input {
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.newsletter-form input:focus {
+    border-color: #1A4D2E;
+    box-shadow: 0 0 0 3px rgba(26, 77, 46, 0.1);
+    outline: none;
+}
+
+/* Scroll Animations - Fade in on scroll */
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), 
+                transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: opacity, transform;
+}
+
+.fade-in-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Apply fade-in to sections */
+.product-config-section,
+.collection-section,
+.stats-banner,
+.comparison-section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.2s, 
+                transform 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.2s;
+}
+
+.product-config-section.visible,
+.collection-section.visible,
+.stats-banner.visible,
+.comparison-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Stats Counter Animation */
+.stat-number {
+    transition: transform 0.3s ease;
+}
+
+.stat-number.animate {
+    animation: countUp 1s ease-out;
+}
+
+@keyframes countUp {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* =========================================
+   RESPONSIVE DESIGN - MOBILE FIRST
+   ========================================= */
+
+/* Mobile Menu Toggle Button */
+.mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    z-index: 1001;
+}
+
+.mobile-menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: #000;
+    transition: all 0.3s ease;
+    border-radius: 2px;
+}
+
+.mobile-menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+}
+
+.mobile-menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* Mobile Menu Overlay */
+.mobile-menu-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.mobile-menu-overlay.active {
+    display: block;
+    opacity: 1;
+}
+
+/* =========================================
+   TABLET STYLES (768px - 1023px)
+   ========================================= */
+@media screen and (max-width: 1023px) {
+    .container {
+        padding: 0 24px;
+    }
+
+    /* Header */
+    .main-header {
+        padding: 20px 0;
+    }
+
+    .nav-links {
+        gap: 24px;
+    }
+
+    .nav-links li a {
+        font-size: 15px;
+    }
+
+    .btn-shop {
+        padding: 10px 24px;
+        font-size: 14px;
+    }
+
+    /* Hero Section */
+    .hero {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: flex-start !important; /* Anchor content to top */
+        padding-top: 100px !important; /* Balanced space below nav bar */
+        background-image: url('../Assets/hero_bottle.svg'); 
+        background-size: cover;
+        background-position: center bottom;
+        background-repeat: no-repeat;
+    }
+    
+    .hero-text-content {
+        max-width: 700px;
+        position: relative;
+        z-index: 10;
+        margin-top: 20px;
+    } 
+    .hero-text-content h1 {
+        font-size: 56px;
+    }
+
+    .hero-stats {
+        gap: 32px;
+    }
+
+    .stat-box img {
+        height: 44px;
+    }
+
+    /* Product Config */
+    .product-config-section {
+        padding: 60px 0;
+    }
+
+    .pdp-layout {
+        gap: 32px;
+        flex-wrap: wrap;
+    }
+
+    .gallery-column {
+        max-width: 100%;
+        flex: 1 1 100%;
+    }
+
+    .details-column {
+        max-width: 100%;
+        flex: 1 1 100%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .main-image-viewport {
+        position: relative;
+        /* Soft grey background to match reference */
+        background: linear-gradient(180deg, #F3F3F3 0%, #E8E8E8 100%);
+        border-radius: 24px;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 500px; /* Fixed height for stability */
+        overflow: hidden;
+    }
+    
+    #js-main-img {
+        height: 380px; /* Adjust based on bottle aspect ratio */
+        width: auto;
+        object-fit: contain;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        z-index: 1;
+    }
+
+    .thumbnail-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Collection */
+    .collection-section {
+        padding: 80px 0;
+    }
+
+    .collection-flex {
+        gap: 48px;
+        flex-wrap: wrap;
+    }
+
+    .collection-content {
+        flex: 1 1 100%;
+    }
+
+    .collection-image {
+        flex: 1 1 100%;
+    }
+
+    /* Stats Banner */
+    .stats-banner {
+        padding: 50px 0;
+    }
+
+    .stats-flex-container {
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .stat-item {
+        flex: 1 1 calc(50% - 10px);
+        min-width: 200px;
+    }
+
+    .stat-number {
+        font-size: 40px;
+    }
+
+    /* Comparison Table */
+    .comparison-section {
+        padding: 60px 0;
+    }
+
+    .comparison-table {
+        font-size: 14px;
+    }
+
+    .comparison-table th,
+    .comparison-table td {
+        padding: 14px 8px;
+    }
+
+    .table-wrapper {
+        overflow-x: auto;
+    }
+
+    /* Footer */
+    .footer-grid {
+        gap: 32px;
+        flex-wrap: wrap;
+    }
+
+    .footer-brand,
+    .footer-social,
+    .footer-newsletter {
+        flex: 1 1 calc(50% - 16px);
+        min-width: 250px;
+    }
+}
+
+/* =========================================
+   MOBILE STYLES (< 768px)
+   ========================================= */
+@media screen and (max-width: 767px) {
+    .container {
+        padding: 0 16px;
+    }
+
+    /* Header / Navigation */
+    .main-header {
+        padding: 16px 0;
+    }
+
+    .main-header .container {
+        position: relative;
+    }
+
+    .mobile-menu-toggle {
+        display: flex;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 280px;
+        height: 100vh;
+        background-color: #fff;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 80px 24px 24px;
+        box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+        transition: right 0.3s ease;
+        z-index: 1000;
+        gap: 0;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .nav-links li {
+        width: 100%;
+        padding: 12px 0;
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+    .nav-links li a {
+        font-size: 18px;
+        display: block;
+        width: 100%;
+    }
+
+    .nav-actions {
+        gap: 16px;
+    }
+
+    .btn-shop {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .search-icon img {
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Hero Section */
+    .hero {
+        height: auto;
+        min-height: 85vh;
+        padding: 100px 0 50px;
+        background-position: center center;
+    }
+
+    .hero-container {
+        justify-content: center;
+        padding: 0;
+    }
+
+    .hero-text-content {
+        max-width: 100%;
+        text-align: center;
+        padding: 0 10px;
+    }
+
+    .hero-text-content h1 {
+        font-size: 36px;
+        line-height: 1.2;
+        margin-bottom: 16px;
+    }
+
+    .hero-subtext {
+        font-size: 16px;
+        margin-bottom: 32px;
+    }
+
+    .hero-stats {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        margin-bottom: 32px;
+    }
+
+    .stat-box {
+        flex: 0 0 auto;
+        min-width: 70px;
+    }
+
+    .stat-box img {
+        height: 40px;
+    }
+
+    .stat-box p {
+        font-size: 11px;
+    }
+
+    .badge {
+
+    }
+
+ /* HERO LAYOUT: Moves everything into the sky area above the grass */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: flex-start !important; /* Anchor content to top */
+    padding-top: 100px !important; /* Balanced space below nav bar */
+    background-image: url('../Assets/hero_bottle.svg'); 
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+}
+
+.hero-text-content {
+    max-width: 700px;
+    position: relative;
+    z-index: 10;
+    margin-top: 20px;
+
+}
+
+.medal-tag {
+    display: flex !important;
+    align-items: center !important;
+    border: none !important;
+    border-radius: 100px !important;
+    width: fit-content !important;
+}
+
+.medal-tag span {
+    font-size: 14px !important;
+    color: #ffffff !important; /* High-contrast white text */
+    font-weight: 500 !important;
+}
+
+.medal-tag img {
+    width: 18px !important;
+    height: 18px !important;
+    filter: brightness(0) invert(1) !important; /* Forces icon to white */
+}
+
+/* PRIMARY BUTTON: Deep green from Figma */
+.btn-primary {
+    background-color: #064532 !important;
+    color: #ffffff !important;
+    padding: 16px 40px !important;
+    border-radius: 50px !important;
+    font-weight: 700 !important;
+    margin-top: 30px;
+    display: inline-block;
+}
+    .btn-primary:hover {
+        background-color: #043627 !important;
+        transform: translateY(-2px);
+    }
+    /* Product Config Section */
+    .product-config-section {
+        padding: 40px 0;
+    }
+
+    .pdp-layout {
+        flex-direction: column;
+        gap: 32px;
+        padding-top: 20px;
+    }
+
+    .gallery-column {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .main-image-viewport {
+        padding: 20px;
+        margin-bottom: 16px;
+        min-height: 350px;
+    }
+
+    #js-main-img {
+        height: 280px;
+        max-width: 100%;
+    }
+
+    .nav-arrow {
+        position: absolute;
+        bottom: 24px; /* Distance from bottom */
+        width: 48px;
+        height: 48px;
+        background: transparent;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 10;
+        transition: all 0.2s ease;
+    }
+
+    .nav-arrow:hover {
+        transform: scale(1.05);
+    }
+    
+    /* Position Left and Right */
+    .nav-arrow.prev {
+        left: 24px;
+    }
+    
+    .nav-arrow.next {
+        right: 24px;
+    }
+    
+    .nav-arrow img {
+        width: 20px;
+        height: 20px;
+        filter: none; /* Keeps original arrow color */
+        pointer-events: none; /* Prevents clicking the image instead of button */
+    }
+    
+    /* PAGINATION DOTS (Bottom Center) */
+    .gallery-dots {
+        position: absolute;
+        bottom: 40px; /* Aligned horizontally with arrows */
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 12px;
+        z-index: 10;
+    }
+    
+    .dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        border: 1px solid #032E15;
+        background: transparent;
+        cursor: pointer;
+        transition: all 0.2s ease;
+    }
+    
+    .dot.active {
+        background-color: #032E15;
+        border-color: #032E15;
+        transform: scale(1.2);
+    }
+
+    .thumbnail-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+        margin-top: 12px;
+    }
+
+    .thumb {
+        height: 70px;
+    }
+
+    .details-column {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .sub-card {
+        padding: 16px;
+        margin-bottom: 12px;
+    }
+
+    .sub-card .card-header {
+        padding: 14px 16px;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .fragrance-grid {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .frag-item {
+        flex: 0 0 calc(33.333% - 6px);
+        min-width: 0;
+        padding: 10px 6px;
+    }
+
+    .frag-item img {
+        width: 54px;
+        height: 94px;
+    }
+
+    .frag-item span {
+        font-size: 10px;
+    }
+
+    .whats-included {
+        margin: 20px 0 16px;
+    }
+
+    .included-flex {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .included-box {
+        width: 100%;
+    }
+
+    .add-to-cart-btn,
+    .add-to-cart-cta {
+        width: 100%;
+        padding: 16px 24px;
+        font-size: 16px;
+        font-weight: 700;
+        background-color: #1A4D2E;
+        color: #fff;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        margin-top: 20px;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .add-to-cart-btn:hover,
+    .add-to-cart-cta:hover {
+        background-color: #143b23;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(26, 77, 46, 0.3);
+    }
+
+    .add-to-cart-btn:active,
+    .add-to-cart-cta:active {
+        transform: translateY(0);
+    }
+
+    /* Collection Section */
+    .collection-section {
+        padding: 60px 0;
+    }
+
+    .collection-flex {
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .section-title {
+        font-size: 28px;
+        margin-bottom: 24px;
+        text-align: center;
+    }
+
+    .accordion-header {
+        padding: 18px;
+    }
+
+    .accordion-header h3 {
+        font-size: 16px;
+    }
+
+    .accordion-body {
+        padding: 0 18px 18px;
+        font-size: 14px;
+    }
+
+    /* Stats Banner */
+    .stats-banner {
+        padding: 40px 0;
+    }
+
+    .stats-flex-container {
+        flex-direction: column;
+        gap: 28px;
+    }
+
+    .stat-item {
+        padding: 0 10px;
+    }
+
+    .stat-number {
+        font-size: 36px;
+        margin-bottom: 8px;
+    }
+
+    .stat-desc {
+        font-size: 13px;
+        line-height: 1.4;
+    }
+
+    /* Comparison Table */
+    .comparison-section {
+        padding: 40px 0;
+    }
+
+    .table-title {
+        font-size: 24px;
+        margin-bottom: 24px;
+        padding: 0 10px;
+    }
+
+    .table-wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        margin: 0 -16px;
+        padding: 0 16px;
+    }
+
+    .comparison-table {
+        min-width: 600px;
+        font-size: 12px;
+    }
+
+    .comparison-table th,
+    .comparison-table td {
+        padding: 12px 6px;
+    }
+
+    .comparison-table td:first-child {
+        font-size: 11px;
+        width: 30%;
+    }
+
+    .brand-box img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .brand-box span {
+        font-size: 10px;
+    }
+
+    .comparison-table td img {
+        width: 16px;
+        height: 16px;
+    }
+
+    .table-cta {
+        margin-top: 32px;
+        display: flex;
+        align-items: center;
+    }
+
+    .btn-green-pill {
+        width: 100%;
+        padding: 14px 32px;
+    }
+
+    /* Footer */
+    .main-footer {
+        padding: 60px 0 32px;
+    }
+
+    .footer-grid {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .footer-brand {
+        text-align: center;
+    }
+
+    .footer-logo {
+        font-size: 28px;
+        margin-bottom: 24px;
+    }
+
+    .footer-nav-groups {
+        justify-content: center;
+        gap: 40px;
+    }
+
+    .footer-social {
+        text-align: center;
+    }
+
+    .footer-newsletter {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .newsletter-form input {
+        width: 100%;
+    }
+
+    .btn-subscribe {
+        width: 100%;
+        padding: 12px 24px;
+    }
+
+    .footer-disclaimer {
+        font-size: 10px;
+        text-align: center;
+    }
+}
+
+/* =========================================
+   SMALL MOBILE STYLES (< 480px)
+   ========================================= */
+@media screen and (max-width: 479px) {
+    .container {
+        padding: 0 12px;
+    }
+
+    /* Hero */
+    .hero {
+        display: flex !important;
+        align-items: flex-start !important; /* Forces content to stay in the sky area */
+        padding-top: 80px !important; /* Moves the entire block up closer to the nav */
+        height: 100vh;
+        background-position: center bottom;
+        background-size: cover;
+    }
+    
+    .hero-text-content {
+        max-width: 600px;
+        margin-top: 20px; /* Fine-tunes the position above the bottle */
+    }
+
+    .hero-stats {
+        gap: 16px;
+    }
+
+    .stat-box {
+        min-width: 70px;
+    }
+
+    .stat-box img {
+        height: 36px;
+    }
+
+    /* Product Config */
+    #js-main-img {
+        height: 250px;
+    }
+
+    .thumb {
+        height: 50px;
+    }
+
+    .sub-card {
+        padding: 16px;
+    }
+
+    .frag-item {
+        flex: 0 0 calc(50% - 4px);
+    }
+
+    /* Collection */
+    .section-title {
+        font-size: 24px;
+    }
+
+    .collection-image img {
+        border-radius: 16px;
+    }
+
+    /* Stats */
+    .stat-number {
+        font-size: 32px;
+    }
+
+    /* Table */
+    .table-title {
+        font-size: 20px;
+    }
+
+    .comparison-table {
+        min-width: 500px;
+        font-size: 11px;
+    }
+
+    /* Footer */
+    .footer-nav-groups {
+        flex-direction: column;
+        gap: 24px;
+    }
+}
+
+/* =========================================
+   LARGE DESKTOP STYLES (> 1456px)
+   ========================================= */
+@media screen and (min-width: 1457px) {
+    .container {
+        padding: 0 40px;
+    }
+}
+
+/* =========================================
+   LANDSCAPE MOBILE ORIENTATION
+   ========================================= */
+@media screen and (max-width: 767px) and (orientation: landscape) {
+    .hero {
+        min-height: 100vh;
+        padding: 100px 0 40px;
+    }
+
+    .hero-text-content h1 {
+        font-size: 40px;
+    }
+
+    .hero-stats {
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+/* =========================================
+   TOUCH DEVICE OPTIMIZATIONS
+   ========================================= */
+@media (hover: none) and (pointer: coarse) {
+    /* Increase touch targets */
+    .nav-links li a,
+    .btn-primary,
+    .add-to-cart-btn,
+    .add-to-cart-cta,
+    .btn-green-pill,
+    .btn-shop {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .thumb,
+    .frag-item,
+    .dot {
+        min-height: 44px;
+    }
+
+    /* Remove hover effects on touch devices */
+    .sub-card:hover,
+    .frag-item:hover {
+        transform: none;
+    }
+}
+
+/* =========================================
+   PRINT STYLES
+   ========================================= */
+@media print {
+    .main-header,
+    .nav-actions,
+    .add-to-cart-btn,
+    .add-to-cart-cta,
+    .btn-green-pill,
+    .newsletter-form,
+    .mobile-menu-toggle {
+        display: none;
+    }
+
+    .hero {
+        height: auto;
+        page-break-after: always;
+    }
+
+    .product-config-section,
+    .collection-section {
+        page-break-inside: avoid;
+    }
+}
+
+
+
+
+
+/* =========================================
+   MOBILE FIXES (Paste at the bottom of index.css)
+   ========================================= */
+
+   @media screen and (max-width: 768px) {
+    
+    /* 1. FIX THE HERO ALIGNMENT 
+       Overrides the "margin-left: 90px" that was pushing content off-screen */
+    .hero-container {
+        margin-left: 0 !important;
+        justify-content: center !important;
+        padding: 0 20px;
+    }
+
+    .hero-text-content {
+        text-align: center;
+        width: 100%;
+    }
+
+    /* 2. PREVENT HERO CUT-OFF 
+       Changes fixed height to min-height so content fits on small screens */
+    .hero {
+        height: auto !important;
+        min-height: 100vh;
+        padding-top: 110px !important;
+        background-size: 160% auto !important; /* Zoom in on bottle slightly */
+        background-position: center bottom !important;
+        align-items: flex-start !important;
+    }
+
+    /* 3. STACK THE PRODUCT LAYOUT 
+       Changes from 2 columns to 1 column */
+    .pdp-layout {
+        grid-template-columns: 1fr !important;
+        gap: 40px;
+    }
+
+    /* 4. OPTIMIZE FRAGRANCE BUTTONS 
+       Changes from 3 columns (too small) to 2 columns (tappable) */
+    .fragrance-grid {
+        grid-template-columns: 1fr 1fr !important;
+    }
+    
+    .frag-item {
+        width: 100% !important; /* Forces item to fill the new grid cell */
+    }
+
+    /* 5. FIX COMPARISON TABLE SCROLLING 
+       Allows the table to scroll horizontally without breaking the page */
+    .table-wrapper {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        margin-left: -16px; /* Bleed into padding for edge-to-edge feel */
+        width: calc(100% + 32px);
+        padding: 0 16px;
+    }
+    
+    /* Sticky first column so users know what they are comparing */
+    .comparison-table td:first-child, 
+    .comparison-table th:first-child {
+        position: sticky;
+        left: 0;
+        background: #fff;
+        z-index: 10;
+        border-right: 1px solid #f0f0f0;
+    }
+
+    /* 6. MOBILE NAVIGATION DRAWER 
+       Makes the menu slide in from the right */
+    .mobile-menu-toggle {
+        display: flex !important; /* Force show hamburger */
+        z-index: 1100;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%; /* Hide off-screen */
+        width: 80%;
+        height: 100vh;
+        background: #ffffff;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: right 0.3s ease;
+        z-index: 1000;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+        padding: 0;
+    }
+
+    .nav-links.active {
+        right: 0; /* Slide in */
+    }
+    
+    /* 7. FOOTER STACKING */
+    .footer-grid {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+    
+    .newsletter-form {
+        flex-direction: column;
+    }
+}
+
+
+/* =========================================
+   FINAL MOBILE OPTIMIZATIONS
+   (Paste at the very bottom of index.css)
+   ========================================= */
+
+/* 1. PREVENT "SWIPE RIGHT" SCROLL ISSUE */
+html, body {
+    width: 100%;
+    overflow-x: hidden !important; /* Cuts off the side menu from scroll view */
+    position: relative;
+}
+
+@media screen and (max-width: 768px) {
+
+    /* 2. FIX HERO CONTENT & IMAGE ALIGNMENT */
+    .hero {
+        /* Ensure background fills the area behind the text */
+        background-position: center bottom !important; 
+        background-size: cover !important; 
+        
+        /* Align content */
+        display: flex !important;
+        align-items: center !important; /* Vertically center text in the "Sky" */
+        justify-content: center !important;
+        
+        /* Fix padding so text isn't "outside" or too high */
+        padding-top: 100px !important; 
+        padding-bottom: 50px !important;
+        min-height: 85vh !important;
+        height: auto !important;
+    }
+
+    .hero-container {
+        margin: 0 !important; /* Reset desktop margins */
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center text horizontally */
+        text-align: center; 
+    }
+
+    .hero-text-content {
+        /* Ensure text stays within screen width */
+        max-width: 100%; 
+        padding: 0 15px; 
+        margin-top: 0 !important;
+    }
+
+    /* 3. CENTER THE FRAGRANCE CAROUSEL */
+    .main-image-viewport {
+        display: flex !important;
+        justify-content: center !important; /* Centers horizontally */
+        align-items: center !important;     /* Centers vertically */
+        width: 100% !important;
+        height: 400px !important; /* Fixed height for consistency */
+        margin: 0 auto 20px auto !important; /* Centers the box itself */
+    }
+
+    #js-main-img {
+        display: block !important;
+        margin: 0 auto !important; /* Auto margins for the image */
+        max-height: 85% !important;
+        width: auto !important;
+        max-width: 100% !important;
+    }
+
+    /* 4. CUSTOM MOBILE FOOTER */
+    .main-footer {
+        padding: 40px 24px 80px; /* Extra bottom padding for mobile browsers */
+        text-align: center;
+    }
+
+    .footer-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 48px; /* Clean spacing between sections */
+    }
+
+    /* Logo Center */
+    .footer-brand { width: 100%; }
+    .footer-logo { margin: 0 auto 24px auto !important; }
+
+    /* Stack Links nicely */
+    .footer-nav-groups {
+        flex-direction: column;
+        gap: 0; /* Remove gap, let padding handle it */
+        border-top: 1px solid rgba(255,255,255,0.1);
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+        padding: 20px 0;
+    }
+
+    .footer-links {
+        margin: 10px 0;
+    }
+    
+    .footer-links li a {
+        font-size: 16px; /* Larger font for tapping */
+        padding: 8px 0;
+        display: block;
+    }
+
+    /* Center Social Icons */
+    .social-list {
+        display: flex;
+        justify-content: center;
+        gap: 24px;
+        margin-bottom: 0;
+    }
+    
+    .social-list li { margin: 0; }
+    
+    .social-list a {
+        font-size: 0; /* Hide text, show icons only for clean look? Optional. */
+        /* If you want text, remove font-size: 0 */
+    }
+    
+    .social-list img {
+        width: 28px; /* Slightly larger icons */
+        height: 28px;
+        margin: 0 !important;
+    }
+
+    /* Clean Newsletter */
+    .footer-newsletter {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .newsletter-form {
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    .btn-subscribe {
+        width: 100%;
+        padding: 16px; /* Tappable button */
+    }
+}
